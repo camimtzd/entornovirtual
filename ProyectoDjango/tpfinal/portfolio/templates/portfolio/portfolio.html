@@ -1,0 +1,46 @@
+{% extends 'core/base.html' %}
+{% block title %}Portfolio {% endblock %}
+
+{% block background %}{% load static %}{% static 'core/img/portfolio-bg.jpg' %}{% endblock %}
+{% block headers %}
+<h1>¿Quiénes somos?</h1>
+<span class="subheading">Te contamos un poco sobre nosotros</span>
+{% endblock %}
+
+
+{% block content %}
+<div class="row project">  	
+    <div class="col-lg-3 col-md-4 offset-lg-1">
+        <img class="img-fluid" src="{%static 'core/img/contact-bg.jpg' %}" alt="">
+    </div>
+  <div class="col-lg-7 col-md-8">
+        <h2 class="section-heading title">Camila Martínez</h2>   
+    <p> talentosa diseñadora y desarrolladora web con una pasión innata por la creación de experiencias digitales impactantes. Con una sólida formación en diseño gráfico y programación web. Camila ha estado inmersa en el mundo de la creación de sitios web durante los últimos 7 años.</p>
+    </div>
+</div>
+</div>
+<div class="row project">  	
+    <div class="col-lg-3 col-md-4 offset-lg-1">
+        <img class="img-fluid" src="{%static 'core/img/about-bg.jpg' %}" alt="">
+    </div>
+  <div class="col-lg-7 col-md-8">
+        <h2 class="section-heading title">Germán Saade</h2>   
+    <p>Desarrollador Full-Stack. Germán posee habilidades tanto en el desarrollo front-end como en el back-end. Su dominio de tecnologías como HTML, CSS, JavaScript, y frameworks como React y Node.js le permite construir sitios web completos y funcionales.</p>
+    </div>
+</div>
+
+
+    {% for project in projects %}
+
+<!-- Proyecto -->
+<div class="row project">  	
+    <div class="col-lg-3 col-md-4 offset-lg-1">
+        <img class="img-fluid" src="{{project.image.url}}" alt="">
+    </div>
+  <div class="col-lg-7 col-md-8">
+        <h2 class="section-heading title">{{project.title}}</h2>   
+    <p>{{project.descripcion}}</p>
+    </div>
+</div>
+{% endfor %}
+{% endblock %}
