@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>{% block title %}{% endblock %}WebInnovation</title>
+    <title>{% block title %}{% endblock %}WebCrear</title>
 
     <!-- Estilos y fuentes del template  -->
     {% load static %}
@@ -18,20 +18,21 @@
 
   </head>
 
-  <body>
+  <body style="background-color: #609dc9;">
 
     <!-- Navegación -->
     
-    <nav class="navbar navbar-expand-lg bg-body-tertiary" id="mainnav" style="background-color: #e3f2fd;">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" id="mainnav" style="background-color: #609dc9;">
       <div class="container-fluid">
-        <a class="nav-link disabled" aria-disabled="true">WebInnovation</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <a class="nav-link disabled bg-light" aria-disabled="true"><h4>WebCrear</h4></a>
+        <nav class="navbar navbar-expand-sm navbar-light bg-light">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#opciones">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+     <div class="collapse navbar-collapse" id="opciones"> 
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="{% url 'home'%}">Home</a>
+              <a class="nav-link" aria-current="page" href="{% url 'home'%}">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="{% url 'about'%}">Servicios</a>
@@ -47,7 +48,7 @@
       </div>
   </nav>
     <!-- Cabecera -->
-    <header class="masthead" style="background-image: url('{% block background %}{% endblock %}')">
+    <header class="masthead" style="background-image: url('{% block background %}{% endblock %}')" >
       <div class="overlay"></div>
       <div class="container">
         <div class="row">
@@ -61,45 +62,35 @@
       </div>
     </header>
 
-    <div class="medio" style="background-color: #e3f2fd;" >
-      <div class="row" >
+    <div class="container" style="background-color: #609dc9;"></div>
+      <div class= "row">
     {% block content %}{% endblock %}
   </div>
 </div>
 
 <hr>
     <!-- Pié de página -->
-    <footer style="background-color: #e3f2fd;">
+    <footer style="background-color: #609dc9;">
       <div class="container">
         <div class="row">
           <div class="col-lg-8 col-md-10 mx-auto">
             <ul class="list-inline text-center">
               <li class="list-inline-item">
-                <a href="#">
+                <a href="https://mail.google.com/">
                   <span class="fa-stack fa-lg">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
                   </span>
                 </a>
               </li>
               <li class="list-inline-item">
-                <a href="#">
+                <a href="https://www.youtube.com/">
                   <span class="fa-stack fa-lg">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">
-                  <span class="fa-stack fa-lg">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-youtube fa-stack-1x fa-inverse"></i>
+                    <i class="fa fa-youtube-play" aria-hidden="true"></i>
                   </span>
                 </a>
               </li>
             </ul>
-            <p class="copyright text-muted">Copyright &copy; 2023 · WebInnovation</p>
+            <p class="copyright ">Copyright &copy; 2023 · WebCrear</p>
           </div>
         </div>
       </div>
