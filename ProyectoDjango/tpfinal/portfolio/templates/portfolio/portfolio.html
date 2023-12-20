@@ -11,6 +11,16 @@
 
 {% for project in projects %}
 
+from PIL import Image
+
+def es_archivo_de_imagen(archivo):
+    try:
+        Image.open(archivo)
+        return True
+    except:
+        return False
+
+
 
 <!-- Proyecto -->
 <div class="row project">  	
