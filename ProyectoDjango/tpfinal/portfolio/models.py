@@ -1,16 +1,18 @@
 from django.db import models
 
+# Create your models here.
+
 class projects(models.Model):
     title = models.CharField(max_length=200, verbose_name="Titulo")
     descripcion = models.TextField(verbose_name="Descripción")
     image = models.ImageField(verbose_name="Imagen", upload_to="projects")
-    created = models.DateTimeField(auto_now_add=True, verbose_name="Fecha Creacion")
-    updated = models.DateTimeField(auto_now=True, verbose_name="Fecha modificacion")
+    created = models.DateTimeField (auto_now_add=True,verbose_name="Fecha Creacion")
+    updated = models.DateTimeField (auto_now=True, verbose_name="Fecha modificacion")
     
-    def __str__(self):
-        return self.title
+def __str__(self):
+    return self.title
     
-    class Meta:
-        verbose_name = "proyecto"
-        verbose_name_plural = "proyectos"
-        ordering = ["-created"]
+class Meta:
+    verbose_name = "proyecto"
+    verbose_name_plural = "proyectos"
+    ordering = ["-created"]
